@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="295dp"
+    android:layout_height="wrap_content"
+    android:padding="9dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_account"/>
+
+    <TextView
+        android:id="@+id/show_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profile_img_left"
+        android:layout_marginStart="6dp"
+        android:text="testing msg"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/shape_rectangle_pink"/>
+
+    <ImageView
+        android:id="@+id/left_img_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_toEndOf="@id/profile_img_left"
+        android:layout_marginStart="6dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="seen"
+        android:layout_toEndOf="@id/profile_img_left"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/colorHint"
+        android:layout_below="@id/show_msg"/>
+
+
+</RelativeLayout>

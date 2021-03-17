@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_message_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorToolbar"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/chev_back"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingEnd="6dp"-->
+<!--            android:paddingStart="6dp"-->
+<!--            android:src="@drawable/ic_chevron"/>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img_mchat"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_account" />
+
+        <TextView
+            android:id="@+id/username_mchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            tools:text="@string/username" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorChat"
+        android:layout_below="@id/toolbar_message_chat"
+        android:layout_above="@id/relative_bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/attack_file_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attach_file"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:id="@+id/txt_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Write message here..."
+            android:fontFamily="@font/montserrat"
+            android:layout_toEndOf="@id/attack_file_btn"
+            android:layout_toStartOf="@id/send_message_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"/>
+
+        <ImageView
+            android:id="@+id/send_message_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="6dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

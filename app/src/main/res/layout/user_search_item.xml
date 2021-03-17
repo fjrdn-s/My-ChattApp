@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorChat"
+    android:paddingTop="12dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_account" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/profile_img"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="@string/username" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_online"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:civ_circle_background_color="@color/colorOnline"
+        android:src="@drawable/ic_account"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="-17dp"
+        android:layout_toEndOf="@+id/profile_img"
+        android:visibility="gone"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_offline"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:civ_circle_background_color="@color/colorOffline"
+        android:src="@drawable/ic_account"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="-17dp"
+        android:layout_toEndOf="@+id/profile_img"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/message_last"
+        android:layout_below="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/profile_img"
+        android:layout_marginStart="12dp"
+        android:padding="3dp"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:textColor="@color/colorHint"/>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/message_last"
+        android:background="@color/colorBlue"
+        android:layout_alignParentEnd="true"/>
+
+
+
+</RelativeLayout>

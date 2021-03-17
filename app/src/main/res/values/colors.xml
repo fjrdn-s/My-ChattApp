@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorToolbar">#595BC9</color>
+    <color name="colorChat">#14153D</color>
+    <color name="colorBlue">#292A50</color>
+    <color name="colorPink">#FF2667</color>
+    <color name="colorHint">#A9AAAE</color>
+    <color name="colorOnline">#05DF29</color>
+    <color name="colorOffline">#686767</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>
